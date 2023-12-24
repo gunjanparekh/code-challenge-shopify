@@ -1,0 +1,41 @@
+<div class="page-width">
+  {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+  
+  {% if section.settings.description != blank %}
+    <div>{{ section.settings.description }}</div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+  {
+    "name": "New Custom Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "default": "New Custom Section",
+        "label": "Heading"
+      },
+      {
+        "type": "inline_richtext",
+        "id": "description",
+        "default": "Text block",
+        "label": "Description"
+      }
+    ],
+    "presets": [
+      {
+         "name": "New Custom Section" 
+      }     
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

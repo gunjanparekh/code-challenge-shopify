@@ -548,6 +548,22 @@
     {%- endif -%}
   </div>
 
+  <hr>
+
+  {% comment %} Custom Product Attribute Start {% endcomment %}
+    
+  {% if product.metafields.custom.custom_metafield_title != blank %}
+    <h2>{{ product.metafields.custom.custom_metafield_title | metafield_tag }}</h2>
+  {% endif %}
+
+  {% if product.metafields.custom.custom_metafield_description != blank %}
+    <div>{{ product.metafields.custom.custom_metafield_description | metafield_tag }}</div>
+  {% endif %}
+
+  {% comment %} Custom Product Attribute End {% endcomment %}
+    
+  <hr>
+  
   {% render 'product-media-modal' variant_images: variant_images %}
 
   {% assign popups = section.blocks | where: 'type', 'popup' %}
