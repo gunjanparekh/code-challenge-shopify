@@ -3,6 +3,8 @@
 ## Product page
 Product variant selection (if applicable), New custom Section and Metafield for product
 
+![Screenshot of Product Variant](https://github.com/gunjanparekh/code-challenge-shopify/blob/main/Screenshots/Product-section-block-1.png)
+
 ## Cart Functionality
 
 - User can addd to cart product from product page without page refresh
